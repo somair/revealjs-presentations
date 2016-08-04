@@ -1,0 +1,2 @@
+# Setup defaults in case user hasn't configured autocrlf'
+* -crlf
