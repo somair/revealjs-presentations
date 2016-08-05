@@ -1,0 +1,22 @@
+{
+  "name": "presentations",
+  "version": "1.0.0",
+  "description": "My presentations",
+  "private": true,
+  "scripts": {
+      "start": "http-server",
+      "serve": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bfee@stash/scm/~bfee/presentations.git"
+  },
+  "keywords": [
+    "presentations"
+  ],
+  "author": "Brennan A. Fee",
+  "license": "Unlicense",
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  }
+}
