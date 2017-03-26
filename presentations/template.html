@@ -13,18 +13,18 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/reveal.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/theme/blood.min.css" id="theme">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/css/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/css/theme/blood.min.css" id="theme">
 
     <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/tomorrow-night-eighties.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/tomorrow-night-eighties.min.css">
 
     <!-- Printing and PDF exports -->
     <script>
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = window.location.search.match( /print-pdf/gi ) ? 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/print/pdf.min.css' : 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/print/paper.min.css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/css/print/pdf.min.css' : 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/css/print/paper.min.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
 
@@ -74,9 +74,9 @@
 
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/js/head.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/js/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/lib/js/head.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/js/reveal.min.js"></script>
 
     <script>
         // More info https://github.com/hakimel/reveal.js#configuration
@@ -86,16 +86,23 @@
             history: true,
             center: true,
             slideNumber: true,
+            pdfMaxPagesPerSlide: 1,
+
+            math: {
+                config: 'TeX-MML-AM_HTMLorMML-full' // See http://docs.mathjax.org/en/latest/config-files.html
+            },
 
             transition: 'slide', // none/fade/slide/convex/concave/zoom
 
             // More info https://github.com/hakimel/reveal.js#dependencies
             dependencies: [
-                { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/js/classList.min.js', condition: function() { return !document.body.classList; } },
-                { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/markdown/marked.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/markdown/markdown.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/zoom-js/zoom.min.js', async: true },
+                { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/plugin/markdown/markdown.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/plugin/math/math.min.js', async: true },
+                { src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/plugin/zoom-js/zoom.min.js', async: true },
+                { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/plugin/print-pdf/print-pdf.min.js', async: true },
                 { src: '/plugins/notes/notes.js', async: true }
             ]
         });

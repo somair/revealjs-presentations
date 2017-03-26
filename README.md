@@ -1,4 +1,5 @@
 # Reveal.js Presentations
+
 This repository houses a simple base structure for creating, managing, and presenting multiple HTML-based presentations.  To create the presentations the excellent [Reveal.js](http://lab.hakim.se/reveal-js/) library is used.  For details on it please see the link provided.
 
 ## Fork This Repo
